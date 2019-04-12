@@ -1,0 +1,13 @@
+{{#each products}}
+        <div class="product-area">
+            <div class="product" style="background-image: url({{this.image}})"></div>
+            <p class="product-text-title">{{this.name}}</p>
+            <p class="product-text-text">{{this.desc}}</p>
+        {{#if discount}}
+            <p class="product-text-text old">€{{this.originalPrice}}</p>
+        {{else}}
+            <p class="white">€{{this.originalPrice}}</p>
+        {{/if}}
+            <p class="product-text-price">€{{this.price}}</p>
+        </div>
+{{/each}}
